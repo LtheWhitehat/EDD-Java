@@ -1,7 +1,5 @@
 package pilha;
 
-import java.util.List;
-
 import listaLigada.ListaLigada;
 
 

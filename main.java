@@ -2,6 +2,7 @@ import listaLigada.*;
 import pilha.Pilha;
 import pilha.pilha;
 import ed;
+import Conjunto.Conjunto;
 import Fila.Fila;
 
 
@@ -73,12 +74,34 @@ public class main {
         System.out.println(fila.Vazia());
     }
 
+    public static void testaConjunto(int tamanho){
+        Conjunto conjunto = new Conjunto();
+        int ascii = (int) 'L';
+        System.out.println(ascii);
+        for(int i =0; i<tamanho; i++){
+            conjunto.adiciona((char) ascii+ "Lillian"+i);
+            ascii++;
+        }
+        System.out.println(conjunto.toString());
+
+        ascii = (int) 'L';
+        System.out.println(ascii);
+        for(int i =0; i<tamanho; i++){
+            conjunto.remove((char) ascii+ "Lillian"+i);
+            ascii++;
+        }
+
+
+        System.out.println(conjunto.toString());
+
+    }
 
     /**
      * @param args
      */
     public static void main(String[] args) {
-        testaFila(35);
+        testaConjunto(14);
+        //testaFila(35);
         //testaPilha(150);
         //testaListaDuplamenteLigada(200);
         //testaListaLigada(300);
