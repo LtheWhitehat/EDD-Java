@@ -2,6 +2,7 @@ import listaLigada.*;
 import pilha.Pilha;
 import pilha.pilha;
 import ed;
+import Fila.Fila;
 
 
 
@@ -57,12 +58,28 @@ public class main {
         System.out.println(pilha);
     }
 
+    public static void testaFila(int tamanho){
+        Fila fila = new Fila();
+
+        for(int i =0; i<tamanho; i++){
+            fila.adciona("Lillian"+i);
+        }
+        System.out.println(fila.Vazia());
+        System.out.println(fila);
+        System.out.println("\n\n\n");
+        for(int i =0; i<tamanho; i++){
+            fila.delete();
+        }
+        System.out.println(fila.Vazia());
+    }
+
 
     /**
      * @param args
      */
     public static void main(String[] args) {
-        testaPilha(150);
+        testaFila(35);
+        //testaPilha(150);
         //testaListaDuplamenteLigada(200);
         //testaListaLigada(300);
     }
