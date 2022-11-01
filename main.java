@@ -1,5 +1,6 @@
 import listaLigada.*;
-
+import pilha.Pilha;
+import pilha.pilha;
 import ed;
 
 
@@ -39,11 +40,30 @@ public class main {
         lista.adiciona(295, "Joy");
         System.out.println(lista);
     }
+
+    public static void testaPilha(int tamanho){
+        Pilha pilha = new Pilha();
+
+        for(int i =0; i<tamanho; i++){
+            pilha.insere("Lillian"+i);
+            
+        }
+        System.out.println(pilha.vazia());
+        System.out.println(pilha);
+        for(int i =0; i<tamanho; i++){
+            pilha.remove();
+        }
+        System.out.println(pilha.vazia());
+        System.out.println(pilha);
+    }
+
+
     /**
      * @param args
      */
     public static void main(String[] args) {
-        testaListaDuplamenteLigada(200);
+        testaPilha(150);
+        //testaListaDuplamenteLigada(200);
         //testaListaLigada(300);
     }
 }
